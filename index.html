@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dopefolio</title>
-    <meta name="description" content="Portfolio Template for Developer" />
+    <title>Yusuke Portfolio</title>
+    <meta name="description" content="Portfolio for Yusuke" />
 
     <link rel="stylesheet" href="css/style.css" />
 
@@ -22,12 +22,12 @@
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
             <img
-              src="./assets/png/john-doe.png"
-              alt="Ram Maheshwari Logo Image"
+              src="./assets/jpeg/logo.jpg"
+              alt="Yusuke Logo Image"
               class="header__logo-img"
             />
           </div>
-          <span class="header__logo-sub">John Doe</span>
+          <span class="header__logo-sub">Yusuke</span>
         </div>
         <div class="header__main">
           <ul class="header__links">
@@ -84,21 +84,31 @@
     </header>
     <section class="home-hero">
       <div class="home-hero__content">
-        <h1 class="heading-primary">Hey, My name is John Doe</h1>
+        <h1 class="heading-primary">Guess the Secret Word in this Portfolio</h1>
         <div class="home-hero__info">
           <p class="text-primary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente solutions for
-            complex problems
-          </p>
+            <strong>How to play:</strong> <br>
+            Find the secret word. You have unlimited guesses. <br>
+            The secret word is one of the words in this page, so to get a hint you will need to read my resume XD <br>
+            After submitting a word, you will see its position. The secret word is number 1. <br>
+            You get a reward for guessing the secret word ;)
+        </p>
+        
         </div>
         <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">Projects</a>
+          <!--<a href="./#projects" class="btn btn--bg">This is where users type their answers</a>-->
+          <!-- This is where users type their answers -->
+          <input type="text" id="guessInput" placeholder="Enter your guess">
+          <button onclick="submitGuess()" class="btn btn--bg">Submit Guess</button>
+          <p id="result"></p>
+          <!-- Add this to your HTML file where you want to display the attempt history -->
+          <ul id="attemptHistory"></ul>
+
         </div>
       </div>
       <div class="home-hero__socials">
         <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
+          <a href="https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/" class="home-hero__social-icon-link">
             <img
               src="./assets/png/linkedin-ico.png"
               alt="icon"
@@ -107,7 +117,7 @@
           </a>
         </div>
         <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
+          <a href="https://github.com/Yusuke710" class="home-hero__social-icon-link">
             <img
               src="./assets/png/github-ico.png"
               alt="icon"
@@ -116,7 +126,7 @@
           </a>
         </div>
         <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
+          <a href="https://twitter.com/Yusuke06552418" class="home-hero__social-icon-link">
             <img
               src="./assets/png/twitter-ico.png"
               alt="icon"
@@ -125,7 +135,7 @@
           </a>
         </div>
         <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
+          <a href="https://www.youtube.com/@yusukemiyashita4879" class="home-hero__social-icon-link">
             <img
               src="./assets/png/yt-ico.png"
               alt="icon"
@@ -133,7 +143,7 @@
             />
           </a>
         </div>
-        <div class="home-hero__social">
+        <!--<div class="home-hero__social">
           <a
             href="#"
             class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
@@ -144,7 +154,7 @@
               class="home-hero__social-icon"
             />
           </a>
-        </div>
+        </div>-->
       </div>
       <div class="home-hero__mouse-scroll-cont">
         <div class="mouse"></div>
@@ -155,8 +165,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
           <span class="heading-sec__sub">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente
+            
           </span>
         </h2>
         <div class="about__content">
@@ -164,42 +173,36 @@
             <h3 class="about__content-title">Get to know me!</h3>
             <div class="about__content-details">
               <p class="about__content-details-para">
-                Hey! It's
-                <strong>John Doe</strong>
-                and I'm a <strong> Frontend Web Developer </strong> located in
-                Los Angeles. I've done
-                <strong> remote </strong>
-                projects for agencies, consulted for startups, and collaborated
-                with talented people to create
-                <strong>digital products </strong>
-                for both business and consumer use.
+                Studied mechatronics and economics at Monash University, currently interning at CSIRO. 
+                Passionate about technology and engineering, specializing in solving complex problems with <strong>Deep Learning</strong> and <strong>High-Performance Computing</strong>. 
+                Published research papers, developed an open-source application, and created educational videos on economics and HPC.  
               </p>
-              <p class="about__content-details-para">
+              <!--<p class="about__content-details-para">
                 I'm a bit of a digital product junky. Over the years, I've used
                 hundreds of web and mobile apps in different industries and
                 verticals. Feel free to
                 <strong>contact</strong> me here.
-              </p>
+              </p>-->
             </div>
             <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
               >Contact</a
             >
           </div>
           <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
+            <h3 class="about__content-title">Words to describe myself</h3>
             <div class="skills">
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">React</div>
-              <div class="skills__skill">SASS</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">Shopify</div>
-              <div class="skills__skill">Wordpress</div>
-              <div class="skills__skill">Google ADS</div>
-              <div class="skills__skill">Facebook Ads</div>
-              <div class="skills__skill">Android</div>
-              <div class="skills__skill">IOS</div>
+              <div class="skills__skill">Soccer</div>
+              <div class="skills__skill">Liverpool</div>
+              <div class="skills__skill">Anime</div>
+              <div class="skills__skill">Mathematics</div>
+              <div class="skills__skill">Manzai</div>
+              <div class="skills__skill">Python</div>
+              <div class="skills__skill">AI</div>
+              <div class="skills__skill">Blue</div>
+              <div class="skills__skill">Robot</div>
+              <div class="skills__skill">Walk</div>
+              <div class="skills__skill">Melbourne</div>
+              <div class="skills__skill">Manga</div>
             </div>
           </div>
         </div>
@@ -210,8 +213,7 @@
         <h2 class="heading heading-sec heading-sec__mb-bg">
           <span class="heading-sec__main">Projects</span>
           <span class="heading-sec__sub">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente
+            Take a look at some of the projects I have worked on!
           </span>
         </h2>
 
@@ -219,72 +221,68 @@
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
+                src="./assets/png/pipeline.png"
                 alt="Software Screenshot"
                 class="projects__row-img"
                 loading="lazy"
               />
             </div>
             <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Project 1</h3>
+              <h3 class="projects__row-content-title">ROSO: Improving Robotic Policy Inference via Synthetic Observations</h3>
               <p class="projects__row-content-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                facilis tempora, explicabo quae quod deserunt eius sapiente
-                praesentium.
+                Featuring my final year project at Monash University.
+                Our research propose the use of generative AI to enhance zero-shot performance in robotic systems. Our approach, Robotic Policy Inference via Synthetic Observations (ROSO), employs stable diffusion to adapt observations of novel objects during inference, improving adaptability without extensive fine-tuning. Experiments demonstrate up to a 57% improvement in successful outcomes compared to pre-trained policies  
               </p>
               <a
-                href="./project-1.html"
+                href="https://yusuke710.github.io/roso.github.io/"
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
-                >Case Study</a
+                >Project Page</a
               >
             </div>
           </div>
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
+                src="./assets/png/ellipsoid_angled_view.png"
                 alt="Software Screenshot"
                 class="projects__row-img"
                 loading="lazy"
               />
             </div>
             <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Project 2</h3>
+              <h3 class="projects__row-content-title">Paraview 3D particle Visualiser</h3>
               <p class="projects__row-content-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                facilis tempora, explicabo quae quod deserunt eius sapiente
-                praesentium.
+                As a software engineer intern at DeepFlow, I had an amazing opportunity to develop open-source software that enables the creation of high-quality, detailed 3D visualizations of data using ParaView and Python.
+                This advanced 3D particle visualisation software allows you to unlock the full potential of your data by creating high-quality, detailed 3D visualisations. Designed for material science, physics simulation etc. This powerful tool offers a range of features, including data table conversion, customizable colouring and lighting, thresholding, and animation.
               </p>
               <a
-                href="./project-2.html"
+                href="https://www.youtube.com/watch?v=JgkmHP0jZgk"
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
-                >Case Study</a
+                >Youtube Video</a
               >
             </div>
           </div>
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
+                src="./assets/png/economics_video.png"
                 alt="Software Screenshot"
                 class="projects__row-img"
                 loading="lazy"
               />
             </div>
             <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Project 3</h3>
+              <h3 class="projects__row-content-title">Economics Video with 3B1B Style </h3>
               <p class="projects__row-content-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                facilis tempora, explicabo quae quod deserunt eius sapiente
-                praesentium.
+                In the context of Mathematical Economics, this video explains the introductory Consumer Theory, specifically the "Existence of a Utility Function representing Preference Relation." I intended to create this video in the style of 3Blue1Brown, incorporating sophisticated video transitions and narration.
               </p>
               <a
-                href="./project-3.html"
+                href="https://www.youtube.com/watch?v=tCaYM52Cq2c"
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
-                >Case Study</a
+                >Youtube Video</a
               >
             </div>
           </div>
@@ -296,8 +294,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main heading-sec__main--lt">Contact</span>
           <span class="heading-sec__sub heading-sec__sub--lt">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente
+            Shoot me a message for a collaboration
           </span>
         </h2>
         <div class="contact__form-container">
@@ -351,55 +348,54 @@
               <span>Social</span>
             </h2>
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="#">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/linkedin-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <a target="_blank" rel="noreferrer" href="https://github.com/Yusuke710">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/github-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <a target="_blank" rel="noreferrer" href="https://twitter.com/Yusuke06552418">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/twitter-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@yusukemiyashita4879">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/yt-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <!--<a target="_blank" rel="noreferrer" href="#">
                 <img
                   class="main-footer__icon main-footer__icon--mr-none"
                   src="./assets/png/insta-ico.png"
                   alt="icon"
                 />
-              </a>
+              </a>-->
             </div>
           </div>
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">John Doe</h4>
+            <h4 class="heading heading-sm text-lt">Yusuke</h4>
             <p class="main-footer__short-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit facilis
-              tempora explicabo quae quod deserunt
+              I like solving complex problems with Deep Learning and High Performance Computing
             </p>
           </div>
         </div>
 
         <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
         <div class="main-footer__lower">
-          &copy; Copyright 2021. Made by
+          Website template borrowed from
           <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
             >Ram Maheshwari</a
           >
@@ -407,6 +403,8 @@
       </div>
     </footer>
 
+    <script src="./seedrandom.js"></script>
     <script src="./index.js"></script>
+    
   </body>
 </html>
