@@ -176,7 +176,8 @@ textarea {
   color: #696969;
   font-size: 1.6rem;
   text-align: left;
-  width: 100%;
+  width: 80%;
+  margin: 2rem 5rem;
   line-height: 1.6; }
   @media only screen and (max-width: 37.5em) {
     .text-primary {
@@ -189,7 +190,7 @@ textarea {
   color: #fff;
   background: linear-gradient(to right, rgba(109, 210, 251, 0.7), rgba(109, 210, 251, 0.7)), url(../../assets/svg/common-bg.svg);
   background-position: center;
-  height: 100vh;
+  height: 100vh; 
   min-height: 80rem;
   max-height: 120rem;
   position: relative; }
@@ -235,7 +236,7 @@ textarea {
     transform: translate(-50%, -50%);
     max-width: 90rem;
     width: 92%;
-    background-color: #fbe6e6;
+    background-color: #f1ecec;
   }
     @media only screen and (max-width: 37.5em) {
       .home-hero__content {
@@ -243,15 +244,65 @@ textarea {
         margin: auto;
         position: static;
         transform: translate(0, 0); } }
+
+    /* Media query for smaller screens, e.g., phones */
+    @media only screen and (max-width: 480px) {
+      .home-hero__content {
+        padding: 12rem 0; /* Adjusted padding for smaller screens */
+        margin: auto;
+        position: static;
+        transform: translate(0, 0);
+      }
+
+      .home-hero__content h1 {
+        font-size: 2rem; /* Adjusted font size for smaller screens */
+      }
+    }
+
+
+    .home-hero__content .question-mark-icon,
+    .home-hero__content .hint-icon {
+      margin: 0px; /* Adjusted margin for spacing */
+      display: inline-block; /* Ensures icons are displayed in the same line */
+    }
+
+
+  /* Default styles for larger screens */
   .home-hero__info {
     margin: 3rem auto 0 auto;
-    max-width: 80rem; }
+    max-width: 80rem;
+  }
+
   .home-hero__cta {
     margin-top: 5rem;
-    text-align: center; }
+    text-align: center;
+  }
+
+  /* Media query for laptops */
+  @media only screen and (max-width: 1024px) {
+    .home-hero__info {
+      margin: 10rem 5rem 0 auto; /* Adjusted margin-top for laptops */
+    }
+
+    .home-hero__cta {
+      margin-top: 7rem; /* Adjusted margin-top for laptops */
+    }
+  }
+
+  /* Media query for smaller screens, e.g., phones */
+  @media only screen and (max-width: 480px) {
+    .home-hero__info {
+      margin-top: 1rem; /* Adjusted margin-top for smaller screens */
+    }
+
+    .home-hero__cta {
+      margin-top: 1rem; /* Adjusted margin-top for smaller screens */
+    }
+  }
+
 
 .about {
-  background: #fafafa; }
+  background: #fafafa; } 
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -511,7 +562,10 @@ textarea {
     padding: 1rem 5rem; }
     @media only screen and (max-width: 56.25em) {
       .header__content {
-        padding: 0 2rem; } }
+        padding: 0 2rem; 
+        
+      
+      } }
   .header__logo-container {
     display: flex;
     align-items: center;
@@ -796,22 +850,13 @@ textarea {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; Remove this line */
   margin: 0;
-  background-image: url('../assets/funny_words.gif'); /* Replace with your background image path */
+  background-image: url('../assets/png/blue.png'); /* Replace with your background image path */
   background-size: cover;
   background-position: center;
-  animation: slowGif 30s infinite; /* Adjust the animation duration (30s) as needed */
 }
 
-@keyframes slowGif {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
 
 
 .typing-animation span {
@@ -824,4 +869,13 @@ textarea {
 .typing-animation span.animate-typing {
   opacity: 1;
   transform: translateY(0);
+}
+
+.home-hero__social-icon {
+  background-color: rgb(240, 184, 0); /* Black color */
+  border-radius: 10%; /* Optional: Make the icon circular */
+}
+
+.header__sm-menu-link a {
+  transition: all 0.5s ease; /* Adjust the duration (0.5s) to your preferred speed */
 }

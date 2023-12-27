@@ -73,7 +73,7 @@ async function setup() {
 
     const randomIndex = getRandomInt(0, words.length - 1);
     secretWord = words[randomIndex];
-    console.log('Here for the Secret Word?:', secretWord);
+    console.log('You think you can find the Secret Word here? haha there you go ->', secretWord);
 
     const randomEmbedding = data[secretWord];
     
@@ -114,22 +114,32 @@ function submitGuess() {
     return;
   }
 
-  const guessedWordIndex = dotProductList.findIndex(item => item.word === guess);
+  const alreadyGuessed = attemptHistory.find(item => item.word === guess);
 
-  if (guessedWordIndex !== -1) {
-    const position = guessedWordIndex + 1;
-
-    if (guess === secretWord) {
-      displayResult(`Congratulations! You found the secret word. You get a secret access to my very personal instagram account https://www.instagram.com/yusk1111111/`);
-    } else {
-      displayResult(`Your word "${guess}" is at position ${position}. Keep guessing!`);
-    }
-
-    attemptHistory.push({ word: guess, position });
-    attemptHistory.sort((a, b) => a.position - b.position);
-  } else {
-    displayResult(`Sorry, '${guess}' is not in this portfolio. Try again.`);
+  if (alreadyGuessed) {
+    displayResult(`You have already tried '${guess}'. It is in position ${alreadyGuessed.position}. Try again.`);
   }
+  else{
+    const guessedWordIndex = dotProductList.findIndex(item => item.word === guess);
+
+    if (guessedWordIndex !== -1) {
+      const position = guessedWordIndex + 1;
+
+      if (guess === secretWord) {
+        displayResult(`Congratulations! You found the secret word. You get a secret access to my very personal instagram account https://www.instagram.com/yusk1111111/`);
+      } 
+      else {
+        displayResult(`Your word "${guess}" is at position ${position}. Keep guessing!`);
+      }
+
+      attemptHistory.push({ word: guess, position });
+      attemptHistory.sort((a, b) => a.position - b.position);
+    } 
+    else {
+      displayResult(`Sorry, '${guess}' is not in this portfolio. Try again.`);
+    }
+}
+  
 
   // Hide the "How to play" section
   hideHowToPlay();
@@ -183,6 +193,32 @@ function hideHowToPlay() {
 function toggleHowToPlay() {
   const howToPlaySection = document.getElementById('howToPlaySection');
   howToPlaySection.classList.toggle('hidden');
+}
+
+function hint() {
+  let hint;
+
+  // If attemptHistory is empty, guess becomes the word in the middle of dotProductList
+  if (attemptHistory.length === 0) {
+    const middleIndex = Math.floor(dotProductList.length / 2);
+    const middleWord = dotProductList[middleIndex].word;
+    hint = middleWord;
+  } else {
+    // If attemptHistory has words, guess becomes the word with half of the best position value in the attemptHistory
+    const bestAttempt = attemptHistory.reduce((prev, current) =>
+      prev.position < current.position ? prev : current
+    );
+
+    const hintPosition = Math.floor(bestAttempt.position / 2);
+    hint = dotProductList[hintPosition].word;
+  }
+
+  // Type hint into the guess input field
+  const guessInput = document.getElementById('guessInput');
+  guessInput.value = hint;
+
+  // Then submit Guess 
+  submitGuess();
 }
 
 

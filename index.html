@@ -38,7 +38,7 @@
         <div class="header__main">
           <ul class="header__links">
             <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Home </a>
+              <a href="./index.html#quiz" class="header__link"> Home </a>
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#about" class="header__link">About </a>
@@ -68,19 +68,15 @@
       </div>
       <div class="header__sm-menu">
         <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
-
+          <ul>
             <li class="header__sm-menu-link">
               <a href="./index.html#about"> About </a>
             </li>
-
+        
             <li class="header__sm-menu-link">
               <a href="./index.html#projects"> Projects </a>
             </li>
-
+        
             <li class="header__sm-menu-link">
               <a href="./index.html#contact"> Contact </a>
             </li>
@@ -88,26 +84,29 @@
         </div>
       </div>
     </header>
-    <section class="home-hero">
+    <section id="quiz" class="home-hero">
 
 
       <div class="home-hero__content">
         <h1 class="heading-primary">
-          Guess the Secret Word in this Portfolio
+          Welcome to Contextofolio!! 
           <span id="howToPlayIcon" class="question-mark-icon" onclick="toggleHowToPlay()">
-            <img src="assets/jpeg/round-Question_mark.jpg" alt="How to Play Icon" width="30" height="30">
+            <img src="assets/jpeg/round-Question_mark.jpg" alt="How to Play Icon" width="25" height="25">
+          </span>
+          <span id="hintIcon" class="hint-icon" onclick="hint()">
+            <img src="assets/png/hint.png" alt="Hint Icon" width="25" height="25">
           </span>
         </h1>
         
         <!-- How to play section -->
         <div id="howToPlaySection" class="home-hero__info">
           <p class="text-primary">
-            <strong>How to play (credit: https://contexto.me/):</strong> <br>
-            - Find the secret word. You have unlimited guesses. <br>
-            - The words were sorted by an AI according to how similar they were to the secret word. <br>
-            - After submitting a word, you will see its position. The secret word is at position 1. <br>
-            - Hint: The secret word is one of the words in this page, so to get a hint you will need to read about me XD <br>
-            - You get a reward for guessing the secret word ;)
+            🕵️‍♂️ 🎭 <strong>How to Play: (credit: https://contexto.me/):</strong> <br>
+
+            1. Discover the secret word hidden on this page with unlimited guesses at your disposal. <br>
+            2. Each guess reveals the position of the word; your target is position 1. <br>
+            3. Need a hint? Dive into my story, the secret word is woven within. <br>
+            4. A special reward awaits the one who cracks the code! <br>
           </p>
         </div>
         <div class="home-hero__cta">
@@ -190,9 +189,9 @@
             <div class="about__content-details">
               <p class="about__content-details-para typing-animation">
                 <span>Studied</span>
-                <strong>mechatronics</strong>
+                <strong>Mechatronics</strong>
                 <span>and</span>
-                <strong>economics</strong>
+                <strong>Economics</strong>
                 <span>at</span>
                 <span>Monash</span>
                 <span>University,</span>
@@ -231,7 +230,7 @@
                 <span>HPC.</span>
               </p>
             </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+            <a href="./index.html#contact" class="btn btn--med btn--theme dynamicBgClr"
               >Contact</a
             >
           </div>
@@ -292,7 +291,7 @@
                   <span>the</span>
                   <span>use</span>
                   <span>of</span>
-                  <strong>generative AI</strong>
+                  <strong>Generative AI</strong>
                   <span>to</span>
                   <span>enhance</span>
                   <span>zero-shot</span>
@@ -310,7 +309,7 @@
                   <span>Observations</span>
                   <span>(ROSO),</span>
                   <span>employs</span>
-                  <strong>stable diffusion</strong>
+                  <strong>Stable Diffusion</strong>
                   <span>to</span>
                   <span>adapt</span>
                   <span>observations</span>
@@ -367,16 +366,16 @@
                 <span>engineer</span>
                 <span>intern</span>
                 <span>at</span>
-                <strong>DeepFlow,</strong>
-                <span>I</span>
+                <strong>DeepFlow</strong>
+                <span>, I</span>
                 <span>had</span>
                 <span>an</span>
                 <span>amazing</span>
                 <span>opportunity</span>
                 <span>to</span>
                 <span>develop</span>
-                <strong>open-source</strong>
-                <strong>software</strong>
+                <strong>Open-Source</strong>
+                <strong>Software</strong>
                 <span>that</span>
                 <span>enables</span>
                 <span>the</span>
@@ -494,8 +493,8 @@
                 <span>the</span>
                 <span>style</span>
                 <span>of</span>
-                <strong>3Blue1Brown,</strong>
-                <span>incorporating</span>
+                <strong>3Blue1Brown</strong>
+                <span>, incorporating</span>
                 <span>sophisticated</span>
                 <span>video</span>
                 <span>transitions</span>
@@ -522,7 +521,7 @@
           </span>
         </h2>
         <div class="contact__form-container">
-          <form action="#" class="contact__form">
+          <form action="#" method="post" class="contact__form">
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
               <input
