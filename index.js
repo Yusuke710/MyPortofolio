@@ -32,6 +32,12 @@ headerLogoContainer.addEventListener('click', () => {
   location.href = 'index.html';
 });
 
+
+
+
+
+
+
 // ---
 // Game Logic
 let secretWord;
@@ -178,3 +184,31 @@ function toggleHowToPlay() {
   const howToPlaySection = document.getElementById('howToPlaySection');
   howToPlaySection.classList.toggle('hidden');
 }
+
+
+//typing animation
+document.addEventListener("DOMContentLoaded", function () {
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const words = entry.target.querySelectorAll("span");
+
+        words.forEach((word, index) => {
+          setTimeout(() => {
+            word.classList.add("animate-typing");
+          }, index * 150); // Adjust the delay between words as needed
+        });
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+  const typingElements = document.querySelectorAll(".typing-animation");
+
+  typingElements.forEach((element) => {
+    observer.observe(element);
+  });
+});
