@@ -97,7 +97,11 @@ document.addEventListener('DOMContentLoaded', function () {
 // Function to submit a guess
 function submitGuess() {
   const guessInput = document.getElementById('guessInput');
-  const guess = guessInput.value.toLowerCase();
+  let guess = guessInput.value.toLowerCase();
+
+  
+  // Replace spaces with empty strings
+  guess = guess.replace(/ /g, '');
 
   if (!/^[a-z0-9]+$/.test(guess)) {
     displayResult('Please enter a valid word');
