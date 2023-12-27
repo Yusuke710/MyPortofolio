@@ -47,7 +47,7 @@ let attemptHistory = [];
 // Function to setup, loading JSON file and calculate distances
 async function setup() {
   try {
-    const response = await fetch('word_embeddings.json');
+    const response = await fetch('word_embedding/word_embeddings.json');
 
     if (!response.ok) {
       throw new Error('Failed to load JSON file');
