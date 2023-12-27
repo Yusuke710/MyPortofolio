@@ -3,7 +3,7 @@ import re
 import json
 
 import numpy as np  # Assuming you're using a library like NumPy for vector operations
-#import openai
+from openai import OpenAI
 
 def scrape_and_embed_words(html_file_path):
     try:
@@ -41,9 +41,8 @@ def normalize_vector(vector):
         return vector
     
 def get_word_embedding(word):
-    #TODO
-    #embedding = openai.Embedding.create(input = [text], model="text-embedding-ada-002")['data'][0]['embedding']
-    embedding = np.random.rand(300)  # Example: Generating a random vector of length 300
+    embedding = client.embeddings.create(input = [word], model="text-embedding-ada-002").data[0].embedding
+    #embedding = np.random.rand(300)  # Example: Generating a random vector of length 300
 
     # Normalize the vector
     normalized_embedding = normalize_vector(embedding)
@@ -64,6 +63,7 @@ def save_word_embeddings_to_file(word_embeddings, output_file):
 # Example usage
 html_file_path = 'index.html'
 output_file_path = 'word_embeddings.json'
+client = OpenAI()
 word_embeddings = scrape_and_embed_words(html_file_path)
 
 if word_embeddings is not None:

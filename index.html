@@ -15,6 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
   </head>
   <body>
     <header class="header">
@@ -84,16 +90,23 @@
     </header>
     <section class="home-hero">
       <div class="home-hero__content">
-        <h1 class="heading-primary">Guess the Secret Word in this Portfolio</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-            <strong>How to play:</strong> <br>
-            Find the secret word. You have unlimited guesses. <br>
-            The secret word is one of the words in this page, so to get a hint you will need to read my resume XD <br>
-            After submitting a word, you will see its position. The secret word is number 1. <br>
-            You get a reward for guessing the secret word ;)
-        </p>
+        <h1 class="heading-primary">
+          Guess the Secret Word in this Portfolio
+          <span id="howToPlayIcon" class="question-mark-icon" onclick="toggleHowToPlay()">
+            <img src="assets/jpeg/round-Question_mark.jpg" alt="How to Play Icon" width="30" height="30">
+          </span>
+        </h1>
         
+        <!-- How to play section -->
+        <div id="howToPlaySection" class="home-hero__info">
+          <p class="text-primary">
+            <strong>How to play (credit: https://contexto.me/):</strong> <br>
+            - Find the secret word. You have unlimited guesses. <br>
+            - The words were sorted by an AI according to how similar they were to the secret word. <br>
+            - After submitting a word, you will see its position. The secret word is at position 1. <br>
+            - Hint: The secret word is one of the words in this page, so to get a hint you will need to read about me XD <br>
+            - You get a reward for guessing the secret word ;)
+          </p>
         </div>
         <div class="home-hero__cta">
           <!--<a href="./#projects" class="btn btn--bg">This is where users type their answers</a>-->

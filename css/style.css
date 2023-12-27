@@ -69,7 +69,7 @@ textarea {
   text-align: center; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary {
-      font-size: 4.5rem; } }
+      font-size: 4rem; } }
 
 .heading-sec__mb-bg {
   margin-bottom: 11rem; }
@@ -103,7 +103,7 @@ textarea {
     top: calc(100% + 1.5rem);
     height: 5px;
     width: 3rem;
-    background: #6DD2FB;
+    background: #0625F8;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px; }
@@ -155,12 +155,12 @@ textarea {
     padding: 1.5rem 5rem;
     font-size: 1.6rem; }
   .btn--theme {
-    background: #6DD2FB;
+    background: #0625F8;
     color: #fff; }
   .btn--theme-inv {
-    color: #6DD2FB;
+    color: #0625F8;
     background: #fff;
-    border: 2px solid #6DD2FB;
+    border: 2px solid #0625F8;
     box-shadow: none;
     padding: calc(1.5rem - 2px) calc(5rem - 2px); }
 
@@ -172,13 +172,13 @@ textarea {
 
 .text-primary {
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   text-align: left;
   width: 100%;
   line-height: 1.6; }
   @media only screen and (max-width: 37.5em) {
     .text-primary {
-      font-size: 2rem; } }
+      font-size: 1.6rem; } }
 
 .d-none {
   display: none; }
@@ -233,7 +233,7 @@ textarea {
     transform: translate(-50%, -50%);
     max-width: 90rem;
     width: 92%;
-    background-color: #6DD2FB;
+    background-color: #fbe6e6;
   }
     @media only screen and (max-width: 37.5em) {
       .home-hero__content {
@@ -517,14 +517,14 @@ textarea {
     color: #333;
     transition: color .3s; }
     .header__logo-container:hover {
-      color: #6DD2FB; }
+      color: #0625F8; }
   .header__logo-img-cont {
     width: 5rem;
     height: 5rem;
     border-radius: 50px;
     overflow: hidden;
     margin-right: 1.5rem;
-    background: #6DD2FB; }
+    background: #0625F8; }
     @media only screen and (max-width: 56.25em) {
       .header__logo-img-cont {
         width: 4.5rem;
@@ -556,7 +556,7 @@ textarea {
     font-weight: 700;
     transition: color .3s; }
     .header__link:hover {
-      color: #6DD2FB; }
+      color: #0625F8; }
     @media only screen and (max-width: 56.25em) {
       .header__link {
         padding: 3rem 1.8rem;
@@ -603,7 +603,7 @@ textarea {
     letter-spacing: 2px;
     transition: color .3s; }
     .header__sm-menu-link a:hover {
-      color: #6DD2FB; }
+      color: #0625F8; }
   .header__sm-menu-link:first-child a {
     border-top: 1px solid #eee; }
   .header__sm-menu-link-last {
@@ -705,6 +705,90 @@ textarea {
     opacity: 0;
     top: 27px; } }
 
-  #guessInput {
-  margin-top: 5rem;
-  text-align: center; }
+
+
+
+
+/* Guess Input Styles */
+#guessInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+/* Submit Guess Button Styles */
+.btn--bg {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Result Message Styles */
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3498db;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Updated Attempt History Styles */
+#attemptHistory {
+  max-height: 300px; /* Adjust the max-height as needed */
+  overflow-y: auto;
+}
+
+#attemptHistory li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#attemptHistory li span.color-indicator {
+  display: inline-block;
+  width: 20px; /* Adjust the width as needed */
+  height: 100%;
+}
+
+#attemptHistory li span.word {
+  margin-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #000; /* Black text color for word */
+}
+
+#attemptHistory li strong.position {
+  font-weight: bold; /* Make the position bold for emphasis */
+  color: #000; /* Black text color for position */
+}
+
+/* Add a new CSS class to hide the "How to play" section */
+.hidden {
+  display: none;
+}
+
+.question-mark-icon {
+  float: right;
+  /* Add any additional styling as needed */
+}
+
+
+
+
+
