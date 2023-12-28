@@ -14,15 +14,8 @@ The primary concept is to uncover the secret word, akin to Contexto, by utilizin
 
 ## [Demo](https://yusuke710.github.io/Contextofolio.github.io/index.html) 🔗
 
-<div align="center">
-  <video width="100%" autoplay loop muted playsinline>
-    <source src="assets/contextofolio_demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <br>
-</div>
+[![Video](https://img.youtube.com/vi/Io9x_D-5bJg/0.jpg)](https://www.youtube.com/watch?v=Io9x_D-5bJg?loop=1)
 
----
 
 ## How to Setup and Deploy
 
