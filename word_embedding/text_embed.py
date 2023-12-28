@@ -62,7 +62,7 @@ def save_word_embeddings_to_file(word_embeddings, output_file):
 
 # Example usage
 html_file_path = 'index.html'
-output_file_path = 'word_embeddings.json'
+output_file_path = 'word_embedding/word_embeddings.json'
 client = OpenAI()
 word_embeddings = scrape_and_embed_words(html_file_path)
 

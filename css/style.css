@@ -67,7 +67,7 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  color: #696969;
+  color: black;
  }
   @media only screen and (max-width: 37.5em) {
     .heading-primary {
@@ -95,10 +95,10 @@ textarea {
   margin-bottom: 3.5rem;
   position: relative; }
   .heading-sec__main--lt {
-    color: #fff; }
+    color: black; }
     .heading-sec__main--lt::after {
       content: '';
-      background: #fff !important; }
+      background: #0625F8 !important; }
   .heading-sec__main::after {
     content: '';
     position: absolute;
@@ -126,7 +126,7 @@ textarea {
     .heading-sec__sub {
       font-size: 1.8rem; } }
   .heading-sec__sub--lt {
-    color: #eee; }
+    color: black; }
 
 .heading-sm {
   font-size: 2.2rem;
@@ -237,6 +237,7 @@ textarea {
     max-width: 90rem;
     width: 92%;
     background-color: #f1ecec;
+    border-radius: 20px; /* Adjust the value as needed for the desired amount of rounding */
   }
     @media only screen and (max-width: 37.5em) {
       .home-hero__content {
@@ -797,6 +798,7 @@ textarea {
   background-color: #ecf0f1;
   border-radius: 5px;
   text-align: center;
+  font-family: 'Your Desired Font', sans-serif;
 }
 
 /* Updated Attempt History Styles */
@@ -827,6 +829,8 @@ textarea {
   white-space: nowrap;
   text-overflow: ellipsis;
   color: #000; /* Black text color for word */
+  font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with the actual font you want to use */
+  font-size: 18px; /* Adjust the font size as needed */
 }
 
 #attemptHistory li strong.position {

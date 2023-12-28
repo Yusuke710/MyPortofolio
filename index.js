@@ -32,10 +32,32 @@ headerLogoContainer.addEventListener('click', () => {
   location.href = 'index.html';
 });
 
+//typing animation
+document.addEventListener("DOMContentLoaded", function () {
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const words = entry.target.querySelectorAll("span");
 
+        words.forEach((word, index) => {
+          setTimeout(() => {
+            word.classList.add("animate-typing");
+          }, index * 150); // Adjust the delay between words as needed
+        });
 
+        observer.unobserve(entry.target);
+      }
+    });
+  }
 
+  const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
 
+  const typingElements = document.querySelectorAll(".typing-animation");
+
+  typingElements.forEach((element) => {
+    observer.observe(element);
+  });
+});
 
 
 // ---
@@ -73,7 +95,7 @@ async function setup() {
 
     const randomIndex = getRandomInt(0, words.length - 1);
     secretWord = words[randomIndex];
-    console.log('You think you can find the Secret Word here? haha there you go ->', secretWord);
+    console.log('You think you can find the Secret Word here? You found it ->', secretWord);
 
     const randomEmbedding = data[secretWord];
     
@@ -171,16 +193,28 @@ function displayAttemptHistory() {
     const backgroundColor = getColorByProximity(proximity);
 
     listItem.innerHTML = `<span class="color-indicator"></span> <span class="word">${attempt.word}</span> <strong class="position">${attempt.position}</strong>`;
-    listItem.style.background = `linear-gradient(to right, ${backgroundColor} ${(1- proximity) * 100}%, transparent ${proximity * 100}%)`;
+    listItem.style.background = `linear-gradient(to right, ${backgroundColor} ${(1- proximity) * 100}%, transparent ${proximity * 10}%)`;
     historyList.appendChild(listItem);
   });
 }
 
 // Function to calculate color based on proximity
 function getColorByProximity(proximity) {
-  const hue = (1 - proximity) * 120; // Map proximity to hue (green to red)
-  return `hsl(${hue}, 100%, 50%)`;
+  const greenHue = 120; // Fixed hue for green
+  const redHue = 0; // Fixed hue for red
+  const darkGreenLightness = 30; // Lightness for darker green
+  const lightness = darkGreenLightness + proximity * (70 - darkGreenLightness); // Adjust the lightness for the transition
+
+  // Interpolate between green and red based on proximity
+  const interpolatedHue = (1 - proximity) * greenHue + proximity * redHue;
+
+  return `hsl(${interpolatedHue}, 100%, ${lightness}%)`;
 }
+
+
+
+
+
 
 
 // Function to hide the "How to play" section
@@ -221,30 +255,3 @@ function hint() {
   submitGuess();
 }
 
-
-//typing animation
-document.addEventListener("DOMContentLoaded", function () {
-  function handleIntersection(entries, observer) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const words = entry.target.querySelectorAll("span");
-
-        words.forEach((word, index) => {
-          setTimeout(() => {
-            word.classList.add("animate-typing");
-          }, index * 150); // Adjust the delay between words as needed
-        });
-
-        observer.unobserve(entry.target);
-      }
-    });
-  }
-
-  const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
-
-  const typingElements = document.querySelectorAll(".typing-animation");
-
-  typingElements.forEach((element) => {
-    observer.observe(element);
-  });
-});
