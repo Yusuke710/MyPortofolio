@@ -14,7 +14,11 @@ The primary concept is to uncover the secret word, akin to Contexto, by utilizin
 
 ## [Demo](https://yusuke710.github.io/Contextofolio.github.io/index.html) 🔗
 
-[![Video](https://img.youtube.com/vi/Io9x_D-5bJg/0.jpg)](https://www.youtube.com/watch?v=Io9x_D-5bJg?loop=1)
+<a href="https://www.youtube.com/watch?v=Io9x_D-5bJg?" target="_blank">
+  <img src="https://img.youtube.com/vi/Io9x_D-5bJg/0.jpg" alt="Video">
+</a>
+
+
 
 
 ## How to Setup and Deploy
