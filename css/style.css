@@ -167,7 +167,7 @@ textarea {
     padding: calc(1.5rem - 2px) calc(5rem - 2px); }
 
 .sec-pad {
-  padding: 12rem 0; }
+  padding: 6rem 0; }
   @media only screen and (max-width: 56.25em) {
     .sec-pad {
       padding: 8rem 0; } }
@@ -303,7 +303,7 @@ textarea {
 
 
 .about {
-  background: #fafafa; } 
+  background: #eeeeee; } 
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -331,16 +331,33 @@ textarea {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
 
+#project_1 {
+  background-color: #ffffff; } 
+
+#project_2 {
+  background-color: #eeeeee; } 
+
+#project_3 {
+  background-color: #ffffff; } 
+
+#project_4 {
+  background-color: #eeeeee; } 
+
+#project_5 {
+  background-color: #ffffff; } 
+
 .projects__row {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-gap: 5rem;
-  margin-bottom: 11rem; }
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 8rem;
+  padding: 0; /* Remove padding */ }
   @media only screen and (max-width: 56.25em) {
     .projects__row {
       grid-template-columns: 1fr;
       grid-gap: 2rem;
-      margin-bottom: 8rem; } }
+      margin-bottom: 8rem;
+     } }
   @media only screen and (max-width: 56.25em) {
     .projects__row {
       text-align: center; } }
