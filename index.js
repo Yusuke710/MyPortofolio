@@ -160,9 +160,7 @@ function submitGuess() {
     else {
       // spell check
       corrected_word = correction(guess)
-      console.log(guess)
-      console.log(correction(corrected_word))
-      
+            
       // if the guessed word is not close to any of the words in the portfolio
       if (guess==corrected_word) {
         displayResult(`Sorry, '${guess}' is not in this portfolio. Try again.`);
