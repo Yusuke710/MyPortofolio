@@ -1,456 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Yusuke Contextofolio</title>
-    <meta name="description" content="Portfolio for Yusuke" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Yusuke Contextofolio</title>
+  <meta name="description" content="Portfolio for Yusuke" />
 
-    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N4R4XMGYC2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <!-- Include js-yaml library -->
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.0.0/dist/js-yaml.min.js"></script>
+  <!-- Include content loader -->
+  <script src="js/contentLoader.js" defer></script>
+  <!-- Include header menu logic -->
+  <script src="js/headerMenu.js" defer></script>
+  <!-- Include game logic -->
+  <script src="js/gameLogic.js" defer></script>
+  <script src="js/seedrandom.js"></script>
+  <!-- Include spell checker logic -->
+  <script src="js/spellChecker.js" defer></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N4R4XMGYC2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-N4R4XMGYC2');
-  </script>
-  
-  <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="./assets/jpeg/logo.jpg"
-              alt="Yusuke Logo Image"
-              class="header__logo-img"
-            />
-          </div>
-          <span class="header__logo-sub">Yusuke</span>
-        </div>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html#quiz" class="header__link"> Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link">About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#project_1" class="header__link">
-                Projects
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
-            </li>
+  gtag('config', 'G-N4R4XMGYC2');
+</script>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <ul class="header__links nav justify-content-end">
+            <!-- Links will be injected here -->
           </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
         </div>
       </div>
       <div class="header__sm-menu">
         <div class="header__sm-menu-content">
           <ul>
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
-            </li>
-        
-            <li class="header__sm-menu-link">
-              <a href="./index.html#project_1"> Projects </a>
-            </li>
-        
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
+            <!-- Links will be injected here -->
           </ul>
         </div>
       </div>
-    </header>
-    <section id="quiz" class="home-hero">
+    </div>
+  </header>
 
-
-      <div class="home-hero__content">
-        <h1 class="heading-primary">
-          Find out Yusuke's secret 
-          <span id="howToPlayIcon" class="question-mark-icon" onclick="toggleHowToPlay()">
-            <img src="assets/jpeg/round-Question_mark.jpg" alt="How to Play Icon" width="25" height="25">
-          </span>
-          <span id="hintIcon" class="hint-icon" onclick="hint()">
-            <img src="assets/png/hint.png" alt="Hint Icon" width="25" height="25">
-          </span>
-        </h1>
-        
-        <!-- How to play section -->
-        <div id="howToPlaySection" class="home-hero__info">
-          <p class="text-primary">
-            <strong>Type the word within this portofolio</strong> <br>
-          </p>
-        </div>
-        <div class="home-hero__cta">
-          <!--<a href="./#projects" class="btn btn--bg">This is where users type their answers</a>-->
-          <!-- This is where users type their answers -->
-          <input type="text" id="guessInput" placeholder="Enter your guess">
-          <button onclick="submitGuess()" class="btn btn--bg">Submit Guess</button>
-          <p id="result"></p>
-          <!-- Add this to your HTML file where you want to display the attempt history -->
-          <ul id="attemptHistory"></ul>
-
-        </div>
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://github.com/Yusuke710" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/github-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://twitter.com/Yusuke06552418" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/twitter-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://www.youtube.com/@yusukemiyashita4879" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/yt-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <!--<div class="home-hero__social">
-          <a
-            href="#"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/png/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>-->
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            
-          </span>
-        </h2>
-        <div class="about__content">
+  <section id="about" class="about sec-pad">
+    <div class="container">
+      <h2 class="heading heading-sec heading-sec__mb-med">
+        <span class="heading-sec__main"></span>
+        <span class="heading-sec__sub"></span>
+      </h2>
+      <div class="row">
+        <div class="col-lg-6 d-flex align-items-center">
           <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
-            <!-- Add the "typing-animation" class to the paragraphs in the "About Me" section -->
+            <img src="" alt="" class="about__content-image">
+            <h3 class="about__content-title"></h3>
+            <div class="home-hero__socials">
+              <!-- Social links will be injected here -->
+            </div>
             <div class="about__content-details">
-              <p class="about__content-details-para typing-animation">
-                Studied Mechatronics and Economics at Monash University, currently interning at CSIRO. Passionate about technology and engineering, specializing in solving complex problems with Deep Learning and High-Performance Computing. Published research papers, developed an open-source application, and created educational videos on economics and HPC.
-              </p>
-            </div>
-            <a href="./index.html#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contact</a
-            >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">Words to describe myself</h3>
-            <div class="skills">
-              <div class="skills__skill">Soccer</div>
-              <div class="skills__skill">Liverpool</div>
-              <div class="skills__skill">Anime</div>
-              <div class="skills__skill">Mathematics</div>
-              <div class="skills__skill">Manzai</div>
-              <div class="skills__skill">Python</div>
-              <div class="skills__skill">AI</div>
-              <div class="skills__skill">Blue</div>
-              <div class="skills__skill">Robot</div>
-              <div class="skills__skill">Walk</div>
-              <div class="skills__skill">Melbourne</div>
-              <div class="skills__skill">Manga</div>
+              <p class="about__content-details-para"></p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="project_1" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-          <span class="heading-sec__sub">
-            Take a look at some of the projects I have worked on!
-          </span>
-        </h2>
+  <!-- Project sections will be injected here -->
 
-        <div class="projects__content">
+  <section id="quiz" class="home-hero">
+    <div class="home-hero__content">
+      <h1 class="heading-primary">
+        <span id="quiz-main-heading"></span>
+        <span id="hintIcon" class="hint-icon" onclick="hint()">
+          <img src="assets/png/hint.png" alt="Hint Icon" width="30" height="30">
+        </span>
+      </h1>
+      
+      <!-- How to play section -->
+      <div id="howToPlaySection" class="home-hero__info">
+        <p class="text-primary">
+          <strong id="howToPlayText"></strong> <br>
+        </p>
+      </div>
+      <div class="home-hero__cta">
+        <input type="text" id="guessInput" placeholder="Enter your guess">
+        <button onclick="submitGuess()" class="btn btn--bg">Submit Guess</button>
+        <p id="result"></p>
+        <ul id="attemptHistory"></ul>
+      </div>
+    </div>
+  </section>
 
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/Can_LLM_Agents.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Can Private LLM Agents Synthesize Household Energy Consumption Data? </h3>
-              <p class="projects__row-content-desc typing-animation">
-                During the internship at CSIRO in 2023 summer, our team wrote a paper investigating the capability of LLM in simulating household electricity data. Our exploratory research has been accepted in an international conference, e-Energy '24: Proceedings of the 15th ACM International Conference on Future and Sustainable Energy Systems.
-              </p>
-              <a
-                href="https://dl.acm.org/doi/10.1145/3632775.3661993"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Read Paper</a
-              >
-            </div>
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="main-footer__upper row">
+        <div class="col-md-6 main-footer__row-1">
+          <h2 class="heading heading-sm main-footer__heading-sm">
+            <span>Social</span>
+          </h2>
+          <div class="main-footer__social-cont mt-3">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/" class="mr-3">
+              <img class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="icon" />
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/Yusuke710" class="mr-3">
+              <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="icon" />
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://twitter.com/Yusuke06552418" class="mr-3">
+              <img class="main-footer__icon" src="./assets/png/twitter-ico.png" alt="icon" />
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@yusukemiyashita4879">
+              <img class="main-footer__icon" src="./assets/png/yt-ico.png" alt="icon" />
+            </a>
           </div>
+        </div>
+        <div class="col-md-6 main-footer__row-2">
+          <p class="main-footer__short-desc mt-3" id="footer-description"></p>
         </div>
       </div>
-    </section>
-
-    <section id="project_2" class="projects sec-pad">
-      <div class="main-container">
-
-        <div class="projects__content">
-
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/merit_prize.jpeg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Merit Prize for Cluster Competition at SuperComputing Asia 2024</h3>
-              <p class="projects__row-content-desc typing-animation">
-                The competition involved a collaborative project for developing earth-system simulation components (HPC) for use in climate and weather studies 🌦️, and the development of a multilingual language model that uses an AI cluster to provide distributed inference service.
-                As part of Monash DeepNeuron, the cluster competition team won the Merit Prize at SuperComputing Asia 2024 for our work in the 6th HPC-AI APAC Competition. Our members Allister and I had the privilege of presenting our work at SCA2024 and receiving the award for the team.
-              </p>
-              <a
-                href="https://medium.com/@media.deepneuron/2023-apac-hpc-ai-competition-fc8689acdfe3"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Blog Post</a
-              >
-            </div>
-          </div>
-        </div>
+      <div class="main-footer__lower mt-5 text-center">
+        Check out the <a rel="noreferrer" target="_blank" href="https://github.com/Yusuke710/Contextofolio.github.io" class="text-white">Github project</a> to build your own Contextofolio!
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <section id="project_3" class="projects sec-pad">
-      <div class="main-container">
-
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/pipeline.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">ROSO: Improving Robotic Policy Inference via Synthetic Observations</h3>
-              <div class="projects__row-content">
-                <p class="projects__row-content-desc typing-animation">
-                  Featuring my final year project at Monash University, our research proposes the use of **Generative AI** to enhance zero-shot performance in robotic systems. Our approach, Robotic Policy Inference via Synthetic Observations (ROSO), employs **Stable Diffusion** to adapt observations of novel objects during inference, improving adaptability without extensive fine-tuning. Experiments demonstrate up to a 57% improvement in successful outcomes compared to pre-trained policies.
-                </p>
-              </div>
-              
-              <a
-                href="https://yusuke710.github.io/roso.github.io/"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Project Page</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="project_4" class="projects sec-pad">
-      <div class="main-container">
-
-        <div class="projects__content">
-
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/ellipsoid_angled_view.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Paraview 3D particle Visualiser</h3>
-              <p class="projects__row-content-desc typing-animation">
-                As a software engineer intern at **DeepFlow**, I had an amazing opportunity to develop **Open-Source Software** that enables the creation of high-quality, detailed **3D** visualizations of data using ParaView and Python. This advanced 3D particle visualization software allows you to unlock the full potential of your data by creating high-quality, detailed 3D visualizations. Designed for material science, physics simulation, etc., this powerful tool offers a range of features, including data table conversion, customizable coloring and lighting, thresholding, and animation.
-              </p>
-              <a
-                href="https://www.youtube.com/watch?v=JgkmHP0jZgk"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Youtube Video</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="project_5" class="projects sec-pad">
-      <div class="main-container">
-
-        <div class="projects__content">
-
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/economics_video.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Economics Video with 3B1B Style </h3>
-              <p class="projects__row-content-desc typing-animation">
-                In the context of **Mathematical Economics**, this video explains the introductory Consumer Theory, specifically the "Existence of a Utility Function representing Preference Relation." I intended to create this video in the style of **3Blue1Brown**, incorporating sophisticated video transitions and narration.
-              </p>
-              <a
-                href="https://www.youtube.com/watch?v=tCaYM52Cq2c"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Youtube Video</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/Yusuke710">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://twitter.com/Yusuke06552418">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/twitter-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@yusukemiyashita4879">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/yt-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <!--<a target="_blank" rel="noreferrer" href="#">
-                <img
-                  class="main-footer__icon main-footer__icon--mr-none"
-                  src="./assets/png/insta-ico.png"
-                  alt="icon"
-                />
-              </a>-->
-            </div>
-          </div>
-          <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">Yusuke</h4>
-            <p class="main-footer__short-desc">
-              I like solving complex problems with Deep Learning and High Performance Computing
-            </p>
-          </div>
-        </div>
-
-        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
-        <div class="main-footer__lower">
-          Website template borrowed from
-          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a> <br>
-          
-          Check out the <a rel="noreferrer" target="_blank" href="https://github.com/Yusuke710/Contextofolio.github.io">Github project</a> to build your own Contextofolio!
-           
-        </div>
-      </div>
-    </footer>
-
-    <script src="./seedrandom.js"></script>
-    <script src="./index.js"></script>
-    
-  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>

@@ -1,0 +1,89 @@
+title: Yusuke Contextofolio
+description: Portfolio for Yusuke
+header:
+  logoAlt: Yusuke Logo Image
+  links:
+    - text: Home
+      href: "./index.html"
+    - text: Publications
+      href: "./publications.html"
+    - text: CV
+      href: "https://drive.google.co"
+
+about:
+  mainHeading: Yusuke Miyashita
+  subHeading: Exploring the Potential of AI Through ....
+  content: >
+    I graduated from Monash University with a Bachelor's degree in Engineering and Economics. I specialize in Deep Learning and High-Performance Computing. In my previous roles at the Commonwealth Scientific and Industrial Research Organisation (CSIRO), Monash University, and the Japanese startup company DeepFlow, I published research papers and developed an open-source application. 
+  image:
+    src: "./assets/jpeg/yusuke.jpg"
+    alt: "Yusuke Miyashita"
+
+projects:
+  - sectionID: project_1
+    sectionClass: project-bg-1
+    imgSrc: ./assets/png/Can_LLM_Agents.png
+    imgAlt: Software Screenshot
+    title: Can Private LLM Agents Synthesize Household Energy Consumption Data?
+    description: >
+      During the internship at CSIRO in 2023 summer, our team wrote a paper investigating the capability of LLM in simulating household electricity data. Our exploratory research has been accepted in an international conference, e-Energy '24: Proceedings of the 15th ACM International Conference on Future and Sustainable Energy Systems.
+    link: 
+      text: Read Paper
+      href: https://dl.acm.org/doi/10.1145/3632775.3661993
+  - sectionID: project_2
+    sectionClass: project-bg-2
+    imgSrc: ./assets/jpeg/merit_prize.jpeg
+    imgAlt: Software Screenshot
+    title: Merit Prize for Cluster Competition at SuperComputing Asia 2024
+    description: >
+      The competition involved a collaborative project for developing earth-system simulation components (HPC) for use in climate and weather studies 🌦️, and the development of a multilingual language model that uses an AI cluster to provide distributed inference service.
+      As part of Monash DeepNeuron, the cluster competition team won the Merit Prize at SuperComputing Asia 2024 for our work in the 6th HPC-AI APAC Competition. Our members Allister and I had the privilege of presenting our work at SCA2024 and receiving the award for the team.
+    link: 
+      text: Blog Post
+      href: https://medium.com/@media.deepneuron/2023-apac-hpc-ai-competition-fc8689acdfe3
+  - sectionID: project_3
+    sectionClass: project-bg-1
+    imgSrc: ./assets/png/pipeline.png
+    imgAlt: Software Screenshot
+    title: ROSO - Improving Robotic Policy Inference via Synthetic Observations
+    description: >
+      Featuring my final year project at Monash University, our research proposes the use of Generative AI to enhance zero-shot performance in robotic systems. Our approach, Robotic Policy Inference via Synthetic Observations (ROSO), employs Stable Diffusion to adapt observations of novel objects during inference, improving adaptability without extensive fine-tuning. Experiments demonstrate up to a 57% improvement in successful outcomes compared to pre-trained policies.
+    link: 
+      text: Project Page
+      href: https://yusuke710.github.io/roso.github.io/
+  - sectionID: project_4
+    sectionClass: project-bg-2
+    imgSrc: ./assets/png/ellipsoid_angled_view.png
+    imgAlt: Software Screenshot
+    title: Paraview 3D particle Visualiser
+    description: >
+      As a software engineer intern at DeepFlow, I had an amazing opportunity to develop Open-Source Software that enables the creation of high-quality, detailed 3D visualizations of data using ParaView and Python. This advanced 3D particle visualization software allows you to unlock the full potential of your data by creating high-quality, detailed 3D visualizations. Designed for material science, physics simulation, etc., this powerful tool offers a range of features, including data table conversion, customizable coloring and lighting, thresholding, and animation.
+    link: 
+      text: Youtube Video
+      href: https://www.youtube.com/watch?v=JgkmHP0jZgk
+  - sectionID: project_5
+    sectionClass: project-bg-1
+    imgSrc: ./assets/png/economics_video.png
+    imgAlt: Software Screenshot
+    title: Economics Video with 3B1B Style
+    description: >
+      In the context of Mathematical Economics, this video explains the introductory Consumer Theory, specifically the "Existence of a Utility Function representing Preference Relation." I intended to create this video in the style of 3Blue1Brown, incorporating sophisticated video transitions and narration.
+    link: 
+      text: Youtube Video
+      href: https://www.youtube.com/watch?v=tCaYM52Cq2c
+
+quiz:
+  mainHeading: Wanna play a game?
+  howToPlay: Type the word within this portfolio to unlock a secret
+
+footer:
+  description: "youfu1202mo@gmail.com" 
+  socialLinks:
+    - href: "https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/"
+      iconSrc: "./assets/png/linkedin-ico.png"
+    - href: "https://github.com/Yusuke710"
+      iconSrc: "./assets/png/github-ico.png"
+    - href: "https://twitter.com/Yusuke06552418"
+      iconSrc: "./assets/png/twitter-ico.png"
+    - href: "https://www.youtube.com/@yusukemiyashita4879"
+      iconSrc: "./assets/png/yt-ico.png"
