@@ -9,6 +9,8 @@ header:
       href: "./publications.html"
     - text: CV
       href: "https://drive.google.co"
+    - text: 日本語
+      href: "./publications.html"
 
 about:
   mainHeading: Yusuke Miyashita
