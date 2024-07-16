@@ -18,7 +18,7 @@ async function loadContent(language = 'en') {
     content.header.links.forEach(link => {
       const li = document.createElement('li');
       li.classList.add('header__link-wrapper');
-      li.innerHTML = `<a href="${link.href}" class="header__link">${link.text}</a>`;
+      li.innerHTML = `<a href="${link.href}" class="header__link" ${link.text === 'CV' ? 'target="_blank"' : ''}>${link.text}</a>`;
       headerLinks.appendChild(li);
 
       // Add event listeners for language switching
