@@ -1,6 +1,7 @@
-async function loadContent() {
+async function loadContent(language = 'en') {
   try {
-    const response = await fetch('content.yaml');
+    const contentFile = language === 'ja' ? 'content_japanese.yaml' : 'content.yaml';
+    const response = await fetch(contentFile);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -19,33 +20,51 @@ async function loadContent() {
       li.classList.add('header__link-wrapper');
       li.innerHTML = `<a href="${link.href}" class="header__link">${link.text}</a>`;
       headerLinks.appendChild(li);
-    });
 
-    // Quiz Section
-    document.getElementById('quiz-main-heading').innerText = content.quiz.mainHeading;
-    document.getElementById('howToPlayText').innerText = content.quiz.howToPlay;
+      // Add event listeners for language switching
+      if (link.text === '日本語') {
+        li.addEventListener('click', (event) => {
+          event.preventDefault();
+          loadContent('ja');
+        });
+      } else if (link.text === 'English') {
+        li.addEventListener('click', (event) => {
+          event.preventDefault();
+          loadContent('en');
+        });
+      }
+    });
 
     // About Section
     document.querySelector('#about .heading-sec__main').innerText = content.about.mainHeading;
     document.querySelector('#about .heading-sec__sub').innerText = content.about.subHeading;
     document.querySelector('#about .about__content-details-para').innerText = content.about.content;
     const aboutSocialContainer = document.querySelector('#about .home-hero__socials');
-      aboutSocialContainer.innerHTML = '';
-      content.footer.socialLinks.forEach(social => {
-        const a = document.createElement('a');
-        a.href = social.href;
-        a.target = "_blank";
-        a.rel = "noreferrer";
-        a.classList.add('mr-3'); // Adding margin class for spacing
-        a.innerHTML = `<img class="main-footer__icon" src="${social.iconSrc}" alt="icon" />`;
-        aboutSocialContainer.appendChild(a);
-      });
-    
+    aboutSocialContainer.innerHTML = '';
+    content.footer.socialLinks.forEach(social => {
+      const a = document.createElement('a');
+      a.href = social.href;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.classList.add('mr-3'); // Adding margin class for spacing
+      a.innerHTML = `<img class="main-footer__icon" src="${social.iconSrc}" alt="icon" />`;
+      aboutSocialContainer.appendChild(a);
+    });
 
     // About Image
     const aboutImage = document.querySelector('#about .about__content-image');
     aboutImage.src = content.about.image.src;
     aboutImage.alt = content.about.image.alt;
+
+    // Clear existing project sections
+    const existingProjectsContainer = document.querySelector('#projects');
+    if (existingProjectsContainer) {
+      existingProjectsContainer.remove();
+    }
+
+    // Clear existing project rows
+    const existingProjectRows = document.querySelectorAll('.projects__row');
+    existingProjectRows.forEach(row => row.remove());
 
     // Projects Section
     const projectsContainer = document.createElement('div');
@@ -53,8 +72,8 @@ async function loadContent() {
       <section id="projects" class="projects sec-pad">
         <div class="container">
           <h2 class="heading heading-sec heading-sec__mb-med">
-            <span class="heading-sec__main">Projects</span>
-            <span class="heading-sec__sub">Explore my work and contributions</span>
+            <span class="heading-sec__main">${content.projectsSection.mainHeading}</span>
+            <span class="heading-sec__sub">${content.projectsSection.subHeading}</span>
           </h2>
         </div>
       </section>
@@ -82,8 +101,18 @@ async function loadContent() {
       projectsContainer.appendChild(projectSection);
     });
 
+    // Quiz Section
+    const quizSection = document.getElementById('quiz');
+    if (content.quiz.play_contextofolio) {
+      quizSection.style.display = 'block';
+      document.getElementById('quiz-main-heading').innerText = content.quiz.mainHeading;
+      document.getElementById('howToPlayText').innerText = content.quiz.howToPlay;
+    } else {
+      quizSection.style.display = 'none';
+    }
+
     // Insert projects container before the quiz section
-    document.querySelector('#quiz').insertAdjacentElement('beforebegin', projectsContainer);
+    quizSection.insertAdjacentElement('beforebegin', projectsContainer);
 
     // Footer
     document.getElementById('footer-description').innerText = content.footer.description;
@@ -101,10 +130,9 @@ async function loadContent() {
       footerSocialContainer.appendChild(a);
     });
 
-
   } catch (error) {
     console.error('Error loading content:', error);
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadContent);
+document.addEventListener('DOMContentLoaded', () => loadContent());

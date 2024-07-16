@@ -9,14 +9,14 @@ header:
       href: "./publications.html"
     - text: CV
       href: "https://drive.google.com/file/d/11vvfBDRHPdswER4hXFbxkCMhqUoMKDzq/view?usp=sharing"
-    - text: 日本語
+    - text: English
       href: "./index.html"
 
 about:
-  mainHeading: Yusuke Miyashita
-  subHeading: I do research in AI and HPC!!
+  mainHeading: 宮下佑甫
+  subHeading: AIとHPCの研究をしています!!
   content: >
-    I graduated from Monash University with a Bachelor's degree in Engineering and Economics. I specialize in Deep Learning and High-Performance Computing. In my previous roles at the Commonwealth Scientific and Industrial Research Organisation (CSIRO), Monash University, and the Japanese startup company DeepFlow, I published research papers and developed an open-source application. 
+    私はモナシュ大学で工学と経済学を勉強しました。ディープラーニングと高性能計算を専門としています。これまで、オーストラリア連邦科学産業研究機構（CSIRO）、モナシュ大学、日本のスタートアップ企業DeepFlowで研究論文を発表し、オープンソースアプリケーションを開発しました。
   image:
     src: "./assets/jpeg/yusuke.jpg"
     alt: "Yusuke Miyashita"
@@ -29,9 +29,9 @@ projects:
     sectionClass: project-bg-1
     imgSrc: ./assets/png/Can_LLM_Agents.png
     imgAlt: Software Screenshot
-    title: Can Private LLM Agents Synthesize Household Energy Consumption Data?
+    title: プライベートLLMエージェントは家庭のエネルギー消費データを合成できるか？
     description: >
-      During the internship at CSIRO in 2023 summer, our team wrote a paper investigating the capability of LLM in simulating household electricity data. Our exploratory research has been accepted in an international conference, e-Energy '24: Proceedings of the 15th ACM International Conference on Future and Sustainable Energy Systems.
+      2023年夏のCSIROでのインターンシップ中、私たちのチームは家庭の電力データのシミュレーションにおけるLLMの能力を調査する論文を書きました。この探索的研究は、国際会議e-Energy '24: 第15回ACM国際未来持続可能エネルギーシステム会議で受理されました。
     link: 
       text: Read Paper
       href: https://dl.acm.org/doi/10.1145/3632775.3661993
@@ -39,10 +39,10 @@ projects:
     sectionClass: project-bg-2
     imgSrc: ./assets/jpeg/merit_prize.jpeg
     imgAlt: Software Screenshot
-    title: Merit Prize for Cluster Competition at SuperComputing Asia 2024
+    title: SuperComputing Asia 2024でのクラスタ競技でメリット賞
     description: >
-      The competition involved a collaborative project for developing earth-system simulation components (HPC) for use in climate and weather studies 🌦️, and the development of a multilingual language model that uses an AI cluster to provide distributed inference service.
-      As part of Monash DeepNeuron, the cluster competition team won the Merit Prize at SuperComputing Asia 2024 for our work in the 6th HPC-AI APAC Competition. Our members Allister and I had the privilege of presenting our work at SCA2024 and receiving the award for the team.
+      この競技は、気候や天気の研究で使用する地球システムシミュレーションコンポーネント（HPC）の開発と、分散推論サービスを提供する多言語言語モデルの開発を含む共同プロジェクトでした。
+      Monash DeepNeuronの一員として、クラスタ競技チームは第6回HPC-AI APAC競技での功績によりSuperComputing Asia 2024でメリット賞を受賞しました。私とAllisterは、SCA2024での発表とチームを代表して賞を受け取る栄誉を得ました。
     link: 
       text: Blog Post
       href: https://medium.com/@media.deepneuron/2023-apac-hpc-ai-competition-fc8689acdfe3
@@ -50,9 +50,9 @@ projects:
     sectionClass: project-bg-1
     imgSrc: ./assets/png/pipeline.png
     imgAlt: Software Screenshot
-    title: ROSO - Improving Robotic Policy Inference via Synthetic Observations
+    title: ROSO - 合成観察によるロボットポリシー推論の改善
     description: >
-      Featuring my final year project at Monash University, our research proposes the use of Generative AI to enhance zero-shot performance in robotic systems. Our approach, Robotic Policy Inference via Synthetic Observations (ROSO), employs Stable Diffusion to adapt observations of novel objects during inference, improving adaptability without extensive fine-tuning. Experiments demonstrate up to a 57% improvement in successful outcomes compared to pre-trained policies.
+      モナシュ大学での最終年プロジェクトとして、我々の研究はロボットシステムにおけるゼロショット性能を向上させるために生成AIを利用することを提案しています。ロボットポリシー推論を合成観察によって行うアプローチ（ROSO）は、Stable Diffusionを用いて推論中に新しいオブジェクトの観察を適応させ、広範なファインチューニングを必要とせずに適応性を向上させます。実験では、事前に訓練されたポリシーと比較して最大57％の成功率の向上を示しています。
     link: 
       text: Project Page
       href: https://yusuke710.github.io/roso.github.io/
@@ -60,9 +60,9 @@ projects:
     sectionClass: project-bg-2
     imgSrc: ./assets/png/ellipsoid_angled_view.png
     imgAlt: Software Screenshot
-    title: Paraview 3D particle Visualiser
+    title: Paraview 3D粒子可視化ツール
     description: >
-      As a software engineer intern at DeepFlow, I had an amazing opportunity to develop Open-Source Software that enables the creation of high-quality, detailed 3D visualizations of data using ParaView and Python. This advanced 3D particle visualization software allows you to unlock the full potential of your data by creating high-quality, detailed 3D visualizations. Designed for material science, physics simulation, etc., this powerful tool offers a range of features, including data table conversion, customizable coloring and lighting, thresholding, and animation.
+      DeepFlowのソフトウェアエンジニアインターンとして、ParaViewとPythonを使用してデータの高品質で詳細な3D可視化を作成するオープンソースソフトウェアを開発する素晴らしい機会を得ました。この高度な3D粒子可視化ソフトウェアは、高品質で詳細な3D可視化を作成することでデータの可能性を最大限に引き出します。材料科学、物理シミュレーションなどに設計されたこの強力なツールは、データテーブル変換、カスタマイズ可能な着色と照明、しきい値処理、アニメーションなどの機能を提供します。
     link: 
       text: Youtube Video
       href: https://www.youtube.com/watch?v=JgkmHP0jZgk
@@ -70,9 +70,9 @@ projects:
     sectionClass: project-bg-1
     imgSrc: ./assets/png/economics_video.png
     imgAlt: Software Screenshot
-    title: Economics Video with 3B1B Style
+    title: 3B1Bスタイルの数理経済学ビデオ
     description: >
-      In the context of Mathematical Economics, this video explains the introductory Consumer Theory, specifically the "Existence of a Utility Function representing Preference Relation." I intended to create this video in the style of 3Blue1Brown, incorporating sophisticated video transitions and narration.
+      数理経済学の「効用関数の存在」を3Blue1Brownのスタイルでビデオを作成しました。
     link: 
       text: Youtube Video
       href: https://www.youtube.com/watch?v=tCaYM52Cq2c
@@ -80,7 +80,7 @@ projects:
 quiz:
   mainHeading: Wanna play a game?
   howToPlay: Type the word within this portfolio to unlock a secret
-  play_contextofolio: True
+  play_contextofolio: False
 
 footer:
   description: "youfu1202mo@gmail.com" 
