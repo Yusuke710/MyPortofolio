@@ -12,14 +12,20 @@ async function loadContent() {
       document.querySelector('meta[name="description"]').setAttribute('content', content.description);
   
       // Header links
-      const headerLinks = document.querySelector('.header__links');
-      headerLinks.innerHTML = '';
-      content.header.links.forEach(link => {
-        const li = document.createElement('li');
-        li.classList.add('header__link-wrapper');
-        li.innerHTML = `<a href="${link.href}" class="header__link">${link.text}</a>`;
-        headerLinks.appendChild(li);
-      });
+    const headerLinks = document.querySelector('.header__links');
+    headerLinks.innerHTML = '';
+    content.header.links.forEach(link => {
+      // Skip the '日本語' link
+      if (link.text === '日本語') {
+        return;
+      }
+
+      const li = document.createElement('li');
+      li.classList.add('header__link-wrapper');
+      li.innerHTML = `<a href="${link.href}" class="header__link" ${link.text === 'CV' ? 'target="_blank"' : ''}>${link.text}</a>`;
+      headerLinks.appendChild(li);
+
+    });
   
       // Footer
       document.getElementById('footer-description').innerText = content.footer.description;
