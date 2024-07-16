@@ -29,6 +29,18 @@ async function loadContent() {
     document.querySelector('#about .heading-sec__main').innerText = content.about.mainHeading;
     document.querySelector('#about .heading-sec__sub').innerText = content.about.subHeading;
     document.querySelector('#about .about__content-details-para').innerText = content.about.content;
+    const aboutSocialContainer = document.querySelector('#about .home-hero__socials');
+      aboutSocialContainer.innerHTML = '';
+      content.footer.socialLinks.forEach(social => {
+        const a = document.createElement('a');
+        a.href = social.href;
+        a.target = "_blank";
+        a.rel = "noreferrer";
+        a.classList.add('mr-3'); // Adding margin class for spacing
+        a.innerHTML = `<img class="main-footer__icon" src="${social.iconSrc}" alt="icon" />`;
+        aboutSocialContainer.appendChild(a);
+      });
+    
 
     // About Image
     const aboutImage = document.querySelector('#about .about__content-image');
@@ -77,18 +89,18 @@ async function loadContent() {
     document.getElementById('footer-description').innerText = content.footer.description;
 
     // Social links
-    const socialContainer = document.querySelector('.home-hero__socials');
-    socialContainer.innerHTML = '';
+    const footerSocialContainer = document.querySelector('.main-footer__social-cont');
+    footerSocialContainer.innerHTML = '';
     content.footer.socialLinks.forEach(social => {
-      const div = document.createElement('div');
-      div.classList.add('home-hero__social');
-      div.innerHTML = `
-        <a href="${social.href}" class="home-hero__social-icon-link">
-          <img src="${social.iconSrc}" alt="icon" class="home-hero__social-icon" />
-        </a>
-      `;
-      socialContainer.appendChild(div);
+      const a = document.createElement('a');
+      a.href = social.href;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.classList.add('mr-3'); // Adding margin class for spacing
+      a.innerHTML = `<img class="main-footer__icon" src="${social.iconSrc}" alt="icon" />`;
+      footerSocialContainer.appendChild(a);
     });
+
 
   } catch (error) {
     console.error('Error loading content:', error);

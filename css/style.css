@@ -141,6 +141,7 @@ body {
 
 .home-hero__socials a {
   margin: 0 0.5rem;
+
 }
 
 .home-hero__socials img {
@@ -401,4 +402,39 @@ body {
   .projects__row-content {
     align-items: center;
   }
+}
+
+/* Publications Section */
+.publications {
+  padding: 40px 0;
+}
+
+.publications__section {
+  margin-bottom: 40px; /* Add margin between sections */
+}
+
+.publications__section h3 {
+  margin-top: 20px; /* Add margin above each heading */
+  margin-bottom: 20px; /* Add margin below each heading */
+}
+
+.publications__list {
+  list-style: none;
+  padding: 0;
+}
+
+.publications__item {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.italic-text {
+  font-style: italic;
+  font-size: 20px;
+  padding: 5px;
+}
+
+/* Highlight red text */
+.highlight-red {
+  color: #E01358;
 }

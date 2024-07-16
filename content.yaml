@@ -8,7 +8,7 @@ header:
     - text: Publications
       href: "./publications.html"
     - text: CV
-      href: "https://drive.google.co"
+      href: "https://drive.google.com/file/d/11vvfBDRHPdswER4hXFbxkCMhqUoMKDzq/view?usp=sharing"
     - text: 日本語
       href: "./publications.html"
 
@@ -89,3 +89,20 @@ footer:
       iconSrc: "./assets/png/twitter-ico.png"
     - href: "https://www.youtube.com/@yusukemiyashita4879"
       iconSrc: "./assets/png/yt-ico.png"
+
+publications:
+  heading: Publications
+  subheading:
+  conferences:
+    - title: "Miyashita, Y., Gahtidis, D., La, C., Rabinowicz, J., & Leitner, J. (2023). ROSO: Improving Robotic Policy Inference via Synthetic Observations. In A. Tompkins, & S. Abpeikar (Eds.), Australasian Conference on Robotics and Automation, ACRA 2023 (Australasian Conference on Robotics and Automation, ACRA). Australian Robotics and Automation Association (ARAA)."
+      link: "https://ssl.linklings.net/conferences/acra/acra2023_proceedings/views/includes/files/pap145s2.pdf" 
+      award: "Best Student Paper Nomination"
+
+  workshops:
+    - title: "Mahathir Almashor, Yusuke Miyashita, Sam West, and Thi Van Dai Dong. 2024. Can Private LLM Agents Synthesize Household Energy Consumption Data? In Proceedings of the 15th ACM International Conference on Future and Sustainable Energy Systems (e-Energy '24). Association for Computing Machinery, New York, NY, USA, 664–668."
+      link: "https://doi.org/10.1145/3632775.3661993"
+
+  invitedtalks:
+    - title: 'Yusuke Miyashita and Allister Lim, "Student Competitions: From Students to Future HPC Researchers" HPC-AI competition 2, SCA2024, Feb. 2024'
+      link: "https://sca24.sc-asia.org/speakers/"
+      award: "Merit Prize"
