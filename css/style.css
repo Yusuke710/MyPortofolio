@@ -312,6 +312,7 @@ body {
   max-width: 60rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  text-align: left; /* Add this line to align text to the left */
 }
 
 .project-bg-1 {
