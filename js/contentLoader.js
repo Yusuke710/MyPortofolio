@@ -35,6 +35,28 @@ async function loadContent(language = 'en') {
       }
     });
 
+    const sm_menu_links = document.querySelector('.header__sm-menu-links');
+    sm_menu_links.innerHTML = '';
+    content.header.links.forEach(link => {
+      const li = document.createElement('li');
+      li.classList.add('header__sm-menu-link');
+      li.innerHTML = `<a href="${link.href}" ${link.text === 'CV' ? 'target="_blank"' : ''}>${link.text}</a>`;
+      sm_menu_links.appendChild(li);
+
+      // Add event listeners for language switching
+      if (link.text === '日本語') {
+        li.addEventListener('click', (event) => {
+          event.preventDefault();
+          loadContent('ja');
+        });
+      } else if (link.text === 'English') {
+        li.addEventListener('click', (event) => {
+          event.preventDefault();
+          loadContent('en');
+        });
+      }
+    });
+
     // About Section
     document.querySelector('#about .heading-sec__main').innerText = content.about.mainHeading;
     document.querySelector('#about .heading-sec__sub').innerText = content.about.subHeading;

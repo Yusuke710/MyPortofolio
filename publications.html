@@ -21,6 +21,7 @@
   <!-- Include js-yaml library -->
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.0.0/dist/js-yaml.min.js"></script>
   <script src="js/publicationLoader.js" defer></script>
+  <script src="js/headerMenu.js" defer></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N4R4XMGYC2"></script>
@@ -34,23 +35,34 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col">
-          <ul class="header__links nav justify-content-end">
-            <!-- Links will be injected here -->
-          </ul>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul>
-            <!-- Links will be injected here -->
-          </ul>
+    <div class="header__content">
+      <div class="header__main">
+        <ul class="header__links">
+          <!-- Links will be injected here -->
+        </ul>
+        <div class="header__main-ham-menu-cont">
+          <img
+            src="./assets/svg/ham-menu.svg"
+            alt="hamburger menu"
+            class="header__main-ham-menu"
+          />
+          <img
+            src="./assets/svg/ham-menu-close.svg"
+            alt="hamburger menu close"
+            class="header__main-ham-menu-close d-none"
+          />
         </div>
       </div>
     </div>
+    <div class="header__sm-menu">
+      <div class="header__sm-menu-content">
+        <ul class="header__sm-menu-links">
+          <!-- Links will be injected here -->
+        </ul>
+      </div>
+    </div>
   </header>
+
 
   <section id="publications" class="publications sec-pad">
     <div class="container">
