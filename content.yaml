@@ -14,7 +14,7 @@ header:
 
 about:
   mainHeading: Yusuke Miyashita
-  subHeading: I do research in AI in Language, Robot and Simulation!!
+  subHeading: I explore AI through research in language, robotics, and simulation!!
   content: >
     I graduated from Monash University with a Bachelor's degree in Engineering and Economics and I have been exploring the applications of AI in different fields such as language, robots and simulation. In my previous roles at the Commonwealth Scientific and Industrial Research Organisation (CSIRO), Monash University, and the Japanese startup company DeepFlow, I published research papers and developed open-source applications. 
   image:
@@ -78,7 +78,7 @@ projects:
 
 quiz:
   mainHeading: Wanna play a game?
-  howToPlay: Type the word within this portfolio to unlock a secret
+  howToPlay: Guess the chosen word within this portofolio to reveal a secret!!
   play_contextofolio: True
 
 footer:

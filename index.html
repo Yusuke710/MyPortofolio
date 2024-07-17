@@ -99,9 +99,6 @@
     <div class="home-hero__content">
       <h1 class="heading-primary">
         <span id="quiz-main-heading"></span>
-        <span id="hintIcon" class="hint-icon" onclick="hint()">
-          <img src="assets/png/hint.png" alt="Hint Icon" width="30" height="30">
-        </span>
       </h1>
       
       <!-- How to play section -->
@@ -113,6 +110,9 @@
       <div class="home-hero__cta">
         <input type="text" id="guessInput" placeholder="Enter your guess">
         <button onclick="submitGuess()" class="btn btn--bg">Submit Guess</button>
+        <span id="hintIcon" class="hint-icon" onclick="hint()">
+          <img src="assets/png/hint.png" alt="Hint Icon" width="40" height="40">
+        </span>
         <p id="result"></p>
         <ul id="attemptHistory"></ul>
       </div>
