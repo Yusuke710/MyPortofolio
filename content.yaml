@@ -25,7 +25,7 @@ projectsSection:
   mainHeading: Projects
   subHeading: Explore my work and contributions
 projects:
-  - sectionID: project_1
+  - sectionID: project_5
     sectionClass: project-bg-1
     imgSrc: ./assets/png/Can_LLM_Agents.png
     imgAlt: Software Screenshot
@@ -35,7 +35,7 @@ projects:
     link: 
       text: Read Paper
       href: https://dl.acm.org/doi/10.1145/3632775.3661993
-  - sectionID: project_2
+  - sectionID: project_4
     sectionClass: project-bg-2
     imgSrc: ./assets/jpeg/merit_prize.jpeg
     imgAlt: Software Screenshot
@@ -55,7 +55,7 @@ projects:
     link: 
       text: Project Page
       href: https://yusuke710.github.io/roso.github.io/
-  - sectionID: project_4
+  - sectionID: project_2
     sectionClass: project-bg-2
     imgSrc: ./assets/png/ellipsoid_angled_view.png
     imgAlt: Software Screenshot
@@ -65,7 +65,7 @@ projects:
     link: 
       text: Youtube Video
       href: https://www.youtube.com/watch?v=JgkmHP0jZgk
-  - sectionID: project_5
+  - sectionID: project_1
     sectionClass: project-bg-1
     imgSrc: ./assets/png/economics_video.png
     imgAlt: Software Screenshot

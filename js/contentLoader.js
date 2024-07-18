@@ -1,6 +1,6 @@
 async function loadContent(language = 'en') {
   try {
-    const contentFile = language === 'ja' ? 'content_japanese.yaml' : 'content.yaml';
+    const contentFile = language === 'ja' ? 'content_second_language.yaml' : 'content.yaml';
     const response = await fetch(contentFile);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

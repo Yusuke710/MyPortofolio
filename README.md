@@ -1,40 +1,68 @@
-# Contextofolio 🕵️‍♂️ 🎭
+# MinimalFolio: The Simplest Website Template, FREE to Publish on GitHub Pages
 
-Want to engage people in reading your portfolio? Transform it into a word-guessing game, similar to Contexto.
-
-Introducing **Contextofolio**🔥🔥🔥
-
-The primary concept is to uncover the secret word, akin to Contexto, by utilizing the words within your portfolio. The goal is to engage people in reading your portfolio.
-
-## Contexto x Portfolio Template for Developers
-
-### What's in this repository? 🤔
-- Simple Implementation of Contexto in JavaScript
-- Portfolio Template for Developers 
+Minimal design, easily customizable portfolio via single YAML file for all creators, engineers, and developers.
 
 ## [Demo](https://yusuke710.github.io/Contextofolio.github.io/index.html) 🔗
-
-<a href="https://www.youtube.com/watch?v=Io9x_D-5bJg?" target="_blank">
-  <img src="https://img.youtube.com/vi/Io9x_D-5bJg/0.jpg" alt="Video">
+<a href="https://yusuke710.github.io/Contextofolio.github.io/index.html" target="_blank">
+  <img src="assets/png/MinimalFolio.png" alt="image" height="300">
 </a>
 
-
-
+## What's in This Repository?
+- Customizable Portfolio Template via YAML file, including:
+  - About You
+  - Project Showcases
+  - CV
+  - Social Links
+- Your Portfolio in Another Language
+- Simple Implementation of [Contexto](https://contexto.me/) to engage readers
 
 ## How to Setup and Deploy
+- Clone this repository by running `git clone https://github.com/Yusuke710/Contextofolio.github.io.git`
+- Modify `content.yaml` in any editor of your choice, such as Visual Studio Code
+- Publish it on [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) for Free!
 
+## Customization 🔧
+
+### Add Information About Yourself
+- Go to [content.yaml](content.yaml) and change any sections you like. For example:
+
+```yaml
+projects:
+  - sectionID: project_1
+    sectionClass: project-bg-1
+    imgSrc: ./assets/png/economics_video.png
+    imgAlt: Software Screenshot
+    title: Economics Video with 3B1B Style
+    description: >
+      This video explains the introductory Consumer Theory in Mathematical Economics, specifically the "Existence of a Utility Function Representing Preference Relation."
+    link: 
+      text: YouTube Video
+      href: https://www.youtube.com/watch?v=tCaYM52Cq2c
+
+```
+
+### Change the Color of the Website
+- Follow [Dopefolio](https://github.com/rammcodes/Dopefolio) Github repository to make design changes to `style.css`
+
+### Add Another Language tn Your Portofolio
+- Change text `日本語` to any language you like and make sure the translated content is in [content_second_language.yaml](content_second_language.yaml)
+```yaml
+header:
+  logoAlt: Portfolio for Yusuke
+  links:
+    - text: Home
+      href: "./index.html"
+    - text: Publications
+      href: "./publications.html"
+    - text: CV
+      href: "https://drive.google.com/file/d/11vvfBDRHPdswER4hXFbxkCMhqUoMKDzq/view?usp=sharing"
+    - text: 日本語
+      href: "./index.html"
+```
+
+### Add a Little Interactive Game, [Contexto](https://contexto.me/)
+Run the following code to ensure the game, contexto is working. 
 ```bash
-# Download the template
-# Clone this repository
-$ git clone https://github.com/Yusuke710/Contextofolio.github.io.git
-
-# Go into the repository
-$ cd Contextofolio.github.io
-
-# Design
-# Customize your page (index.html, style.css) by following the section below. Check the layout and design using live server 
-
-# Development Contexto for your Portfolio
 # Install requests, bs4, openai
 $ pip install requests beautifulsoup4 openai
 
@@ -43,32 +71,21 @@ $ export OPENAI_API_KEY='yourkey'
 
 # Encode words into vector embeddings
 $ python word_embedding/text_embed.py
-
-# Once again, go to live server and check the functionality of Contexto is working
-
-# Publish Online with github.io
-# Push it to your repo
-$ git remote set-url origin <your github repo>
-
-# Follow github page setting to publish it. 
-# Note: You need to set up an external server if you want to use the email feature. There can be a security risk placing formspree endpoint URL on github as people can access it.
-https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 ```
 
-## Customisation 🔧
+Otherwise, remove the section by setting it to `False` like below:
 
-Please follow [Dopefolio](https://github.com/rammcodes/Dopefolio) github to make changes to index.html, style.css
-
-## Author 👨‍💻
-
-**Yusuke Miyashita** - **[Linkedin](https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/)**, **[Twitter](https://twitter.com/Yusuke06552418)**, **[Github](https://github.com/Yusuke710)**, **[Portfolio](https://yusuke710.github.io/Contextofolio.github.io/index.html)**  
+```yaml
+quiz:
+  mainHeading: Wanna play a game?
+  howToPlay: Guess the chosen word within this portofolio to reveal a secret!!
+  play_contextofolio: False
+```
 
 ## Credit
+[Dopefolio](https://github.com/rammcodes/Dopefolio) <br>
 
-[Contexto](https://contexto.me/) <br>
-
-[Dopefolio](https://github.com/rammcodes/Dopefolio)
-
+[Contexto](https://contexto.me/) 
 
 ## License 📄
 
