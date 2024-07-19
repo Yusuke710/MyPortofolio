@@ -1,27 +1,43 @@
-from bs4 import BeautifulSoup
 import re
-import json
 
-import numpy as np  # Assuming you're using a library like NumPy for vector operations
+import yaml
+import json
+import numpy as np
 from openai import OpenAI
 
-def scrape_and_embed_words(html_file_path):
+def extract_text_from_yaml(yaml_content):
+    def extract_text(data, key_to_skip="publications"):
+        if isinstance(data, dict):
+            text = ""
+            for key, value in data.items():
+                if key != key_to_skip:
+                    text += " " + extract_text(value, key_to_skip)
+            return text
+        elif isinstance(data, list):
+            return " ".join(extract_text(item, key_to_skip) for item in data)
+        else:
+            return str(data)
+    
+    return extract_text(yaml_content)
+
+def scrape_and_embed_words(yaml_file_path):
     try:
-        # Open and read the HTML file
-        with open(html_file_path, 'r', encoding='utf-8') as file:
-            html_content = file.read()
+        # Open and read the YAML file
+        with open(yaml_file_path, 'r', encoding='utf-8') as file:
+            yaml_content = yaml.safe_load(file)
 
-        # Create a BeautifulSoup object to parse the HTML
-        soup = BeautifulSoup(html_content, 'html.parser')
-
-        # Extract text content from the HTML
-        text_content = soup.get_text()
+        # Extract text content excluding the "publications" section
+        text_content = extract_text_from_yaml(yaml_content)
 
         # Use regular expressions to find words (ignoring case)
         words = re.findall(r'\b\w+\b', text_content.lower())
 
         # Create a set to store unique words
         unique_words = set(words)
+        print(f'Unique words in your Portofolio: {unique_words}')
+        
+        # Remove words containing numbers
+        unique_words = {word for word in unique_words if not re.search(r'\d', word)}
 
         # Placeholder for word embeddings (replace this with your actual encoding logic)
         # Assuming you have a function get_word_embedding(word) that returns the embedding for a word
@@ -41,8 +57,7 @@ def normalize_vector(vector):
         return vector
     
 def get_word_embedding(word):
-    embedding = client.embeddings.create(input = [word], model="text-embedding-ada-002").data[0].embedding
-    #embedding = np.random.rand(300)  # Example: Generating a random vector of length 300
+    embedding = client.embeddings.create(input=[word], model="text-embedding-ada-002").data[0].embedding
 
     # Normalize the vector
     normalized_embedding = normalize_vector(embedding)
@@ -61,10 +76,10 @@ def save_word_embeddings_to_file(word_embeddings, output_file):
         print(f"An error occurred while saving word embeddings: {e}")
 
 # Example usage
-html_file_path = 'index.html'
+yaml_file_path = 'content.yaml'
 output_file_path = 'word_embedding/word_embeddings.json'
 client = OpenAI()
-word_embeddings = scrape_and_embed_words(html_file_path)
+word_embeddings = scrape_and_embed_words(yaml_file_path)
 
 if word_embeddings is not None:
     save_word_embeddings_to_file(word_embeddings, output_file_path)

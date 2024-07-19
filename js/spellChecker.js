@@ -1,34 +1,28 @@
 let WORDS = {};
 
-async function scrapeWords(htmlFilePath) {
+async function loadWordsFromJson(jsonFilePath) {
   try {
-    // Fetch the HTML content
-    const response = await fetch(htmlFilePath);
-    const htmlContent = await response.text();
+    // Fetch the JSON content
+    const response = await fetch(jsonFilePath);
+    const jsonData = await response.json();
 
-    // Create a DOM parser
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlContent, 'text/html');
-
-    // Extract text content from the HTML
-    const textContent = doc.body.innerText;
-
-    // Use regular expressions to find words (ignoring case)
-    const words = textContent.toLowerCase().match(/\b\w+\b/g) || [];
+    // Extract keys (words) from the JSON object
+    const words = Object.keys(jsonData);
 
     // Create a counter for words
     words.forEach(word => {
       WORDS[word] = (WORDS[word] || 0) + 1;
     });
+
   } catch (e) {
     console.error(`An error occurred: ${e}`);
   }
 }
 
-const htmlFilePath = 'index.html';
+const jsonFilePath = 'word_embedding/word_embeddings.json';
 
 document.addEventListener('DOMContentLoaded', function () {
-  scrapeWords(htmlFilePath);
+  loadWordsFromJson(jsonFilePath);
 });
 
 function P(word, N = Object.values(WORDS).reduce((a, b) => a + b, 0)) {
@@ -37,12 +31,12 @@ function P(word, N = Object.values(WORDS).reduce((a, b) => a + b, 0)) {
 }
 
 function correction(word) {
-  // Most probable spelling correction for word. word needs to be an array for reduce to be applied
+  // Most probable spelling correction for word
   return candidates(word).reduce((a, b) => P(a) > P(b) ? a : b);
 }
 
 function candidates(word) {
-  let knownWords = known(word);
+  let knownWords = known([word]);
 
   if (knownWords.length > 0) {
     return knownWords;
@@ -64,11 +58,6 @@ function candidates(word) {
 }
 
 function known(words) {
-  // Wrap words in an array if it's not already one
-  if (!Array.isArray(words)) {
-    words = [words];
-  }
-
   // The subset of `words` that appear in the dictionary of WORDS
   return words.filter(w => WORDS.hasOwnProperty(w));
 }
