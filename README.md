@@ -2,8 +2,8 @@
 
 Minimal design, easily customizable portfolio via single YAML file for all creators, engineers, and developers.
 
-## [Demo](https://yusuke710.github.io/Contextofolio.github.io/index.html) 🔗
-<a href="https://yusuke710.github.io/Contextofolio.github.io/index.html" target="_blank">
+## [Demo](https://yusuke710.github.io/minimalfolio.github.io/) 🔗
+<a href="https://yusuke710.github.io/minimalfolio.github.io/" target="_blank">
   <img src="assets/png/MinimalFolio.png" alt="image" height="300">
 </a>
 
@@ -17,7 +17,7 @@ Minimal design, easily customizable portfolio via single YAML file for all creat
 - Simple Implementation of [Contexto](https://contexto.me/) to engage readers
 
 ## How to Setup and Deploy
-- Clone this repository by running `git clone https://github.com/Yusuke710/Contextofolio.github.io.git`
+- Clone this repository by running `git clone https://github.com/Yusuke710/minimalfolio.github.io.git`
 - Modify `content.yaml` in any editor of your choice, such as Visual Studio Code
 - Publish it on [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) for Free!
 
@@ -64,7 +64,7 @@ header:
 Run the following code to ensure the game, contexto is working. 
 ```bash
 # Install requests, bs4, openai
-$ pip install requests beautifulsoup4 openai
+$ pip install PyYAML numpy openai
 
 # Export openai key (on Linux)
 $ export OPENAI_API_KEY='yourkey'
@@ -79,6 +79,7 @@ Otherwise, remove the section by setting it to `False` like below:
 quiz:
   mainHeading: Wanna play a game?
   howToPlay: Guess the chosen word within this portofolio to reveal a secret!!
+  submit_btn: Submit Guess
   play_contextofolio: False
 ```
 

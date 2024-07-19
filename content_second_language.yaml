@@ -79,10 +79,12 @@ projects:
 quiz:
   mainHeading: Wanna play a game?
   howToPlay: Type the word within this portfolio to unlock a secret
+  submit_btn: Submit Guess
   play_contextofolio: False
 
 footer:
   description: "youfu1202mo@gmail.com" 
+  portofolio_link: "Check out the  Github project to build your own Portofolio!"
   socialLinks:
     - href: "https://www.linkedin.com/in/yusuke-miyashita-79a3771a5/"
       iconSrc: "./assets/png/linkedin-ico.png"

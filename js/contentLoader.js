@@ -129,6 +129,7 @@ async function loadContent(language = 'en') {
       quizSection.style.display = 'block';
       document.getElementById('quiz-main-heading').innerText = content.quiz.mainHeading;
       document.getElementById('howToPlayText').innerText = content.quiz.howToPlay;
+      document.getElementById('quizbtn').innerText = content.quiz.submit_btn;
     } else {
       quizSection.style.display = 'none';
     }
@@ -138,6 +139,7 @@ async function loadContent(language = 'en') {
 
     // Footer
     document.getElementById('footer-description').innerText = content.footer.description;
+    document.getElementById('footer-portofolio-link').innerText = content.footer.portofolio_link;
 
     // Social links
     const footerSocialContainer = document.querySelector('.main-footer__social-cont');

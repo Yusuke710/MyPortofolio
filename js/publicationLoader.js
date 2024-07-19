@@ -44,6 +44,7 @@ async function loadContent() {
   
       // Footer
       document.getElementById('footer-description').innerText = content.footer.description;
+      document.getElementById('footer-portofolio-link').innerText = content.footer.portofolio_link;
   
       // Social links
       const socialContainer = document.querySelector('.main-footer__social-cont');
