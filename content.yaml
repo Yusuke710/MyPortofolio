@@ -25,6 +25,16 @@ projectsSection:
   mainHeading: Projects
   subHeading: Explore my work and contributions
 projects:
+  - sectionID: project_6
+    sectionClass: project-bg-2
+    imgSrc: ./assets/png/nanoPerplexityAI.png
+    imgAlt: Video Screenshot
+    title: "nanoPerplexityAI: The simplest open-source implementation of perplexity.ai"
+    description: >
+      The simplest and most intuitive open-source implementation of an open source perplexity.ai, a large language model(LLM) service which cites information from Google. No fancy GUI or LLM agents are involved, just 100 lines of python code.
+    link: 
+      text: Youtube Video
+      href: https://youtu.be/8zBDTnSYSoc
   - sectionID: project_5
     sectionClass: project-bg-1
     imgSrc: ./assets/png/Can_LLM_Agents.png
