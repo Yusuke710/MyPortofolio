@@ -34,10 +34,10 @@ def scrape_and_embed_words(yaml_file_path):
 
         # Create a set to store unique words
         unique_words = set(words)
-        print(f'Unique words in your Portofolio: {unique_words}')
         
         # Remove words containing numbers
         unique_words = {word for word in unique_words if not re.search(r'\d', word)}
+        print(f'Unique words in your Portofolio: {unique_words}')
 
         # Placeholder for word embeddings (replace this with your actual encoding logic)
         # Assuming you have a function get_word_embedding(word) that returns the embedding for a word
