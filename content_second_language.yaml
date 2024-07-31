@@ -29,11 +29,12 @@ projects:
     sectionClass: project-bg-2
     imgSrc: ./assets/png/nanoPerplexityAI.png
     imgAlt: Video Screenshot
-    title: "nanoPerplexityAI: Perplexity.ai の最もシンプルなオープンソース実"
+    title: "nanoPerplexityAI: Perplexity.ai の最もシンプルなオープンソース実装"
     description: >
-      Perplexity.ai の最も簡単で直感的なオープンソース実装である nanoPerplexityAI は、Google からの情報を引用する大規模言語モデル (LLM) サービスです。GUI や LLM エージェントは含まれておらず、わずか 100 行の Python コードで動作します。
+      PerplexityAI は、GoogleとOpenAIを組み合わせた大規模言語モデル (LLM) サービスであり、Webサイトを引用することでAIのハルシネーションを少なくします。コードにはGUIやLLM エージェントは含まれておらず、わずか100行のPythonで動作します。
     link: 
       text: Youtube Video
+      href: https://youtu.be/8zBDTnSYSoc
   - sectionID: project_5
     sectionClass: project-bg-1
     imgSrc: ./assets/png/Can_LLM_Agents.png
