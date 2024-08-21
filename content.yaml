@@ -8,7 +8,7 @@ header:
     - text: Publications
       href: "./publications.html"
     - text: CV
-      href: "https://drive.google.com/file/d/11vvfBDRHPdswER4hXFbxkCMhqUoMKDzq/view?usp=sharing"
+      href: "https://drive.google.com/file/d/1XRfy0wOMLphDXwdKXwpdaMK3AVfABMeV/view?usp=sharing"
     - text: 日本語
       href: "./index.html"
 
@@ -33,8 +33,8 @@ projects:
     description: >
       The simplest and most intuitive open-source implementation of an open source perplexity.ai, a large language model(LLM) service which cites information from Google. No fancy GUI or LLM agents are involved, just 100 lines of python code.
     link: 
-      text: Youtube Video
-      href: https://youtu.be/8zBDTnSYSoc
+      text: Code
+      href: https://github.com/Yusuke710/nanoPerplexityAI
   - sectionID: project_5
     sectionClass: project-bg-1
     imgSrc: ./assets/png/Can_LLM_Agents.png

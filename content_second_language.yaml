@@ -8,7 +8,7 @@ header:
     - text: Publications
       href: "./publications.html"
     - text: CV
-      href: "https://drive.google.com/file/d/11vvfBDRHPdswER4hXFbxkCMhqUoMKDzq/view?usp=sharing"
+      href: "https://drive.google.com/file/d/1XRfy0wOMLphDXwdKXwpdaMK3AVfABMeV/view?usp=sharing"
     - text: English
       href: "./index.html"
 
@@ -33,8 +33,8 @@ projects:
     description: >
       PerplexityAI は、GoogleとOpenAIを組み合わせた大規模言語モデル (LLM) サービスであり、Webサイトを引用することでAIのハルシネーションを少なくします。コードにはGUIやLLM エージェントは含まれておらず、わずか100行のPythonで動作します。
     link: 
-      text: Youtube Video
-      href: https://youtu.be/8zBDTnSYSoc
+      text: Code
+      href: https://github.com/Yusuke710/nanoPerplexityAI
   - sectionID: project_5
     sectionClass: project-bg-1
     imgSrc: ./assets/png/Can_LLM_Agents.png
