@@ -43,8 +43,8 @@ projects:
     description: >
       During the internship at CSIRO in 2023 summer, our team investigated the capability of LLM in simulating household electricity data.
     link: 
-      text: Read Paper
-      href: https://dl.acm.org/doi/10.1145/3632775.3661993
+      text: Read Blog
+      href: https://link.growkudos.com/1emgdadq4u8
   - sectionID: project_4
     sectionClass: project-bg-2
     imgSrc: ./assets/jpeg/merit_prize.jpeg

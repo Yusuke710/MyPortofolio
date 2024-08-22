@@ -43,8 +43,8 @@ projects:
     description: >
       2023年夏のCSIROでのインターンシップ中、私たちのチームは家庭の電力データのシミュレーションにおける大規模言語モデルの能力を調査する論文を書きました。
     link: 
-      text: Read Paper
-      href: https://dl.acm.org/doi/10.1145/3632775.3661993
+      text: Read Blog
+      href: https://link.growkudos.com/1emgdadq4u8
   - sectionID: project_4
     sectionClass: project-bg-2
     imgSrc: ./assets/jpeg/merit_prize.jpeg
